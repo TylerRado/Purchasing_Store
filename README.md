@@ -4,4 +4,4 @@ This is a simple web-base purchasing form that allows users to pay for their pro
 
 ## 🛠️ Technologies Used
 
-- Programming Language: e.g., html, CSS and JavaScript.
+- Programming Language: html, CSS and JavaScript.
