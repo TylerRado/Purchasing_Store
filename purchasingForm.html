@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href = "style.css" type = "stylesheet"> -->
+    <script src = "purchase.js"></script>
+    <title>purchase</title>
+    <h1 id = "heading">Benfica Computer Componets store</h1>
+    
+</head>
+
+    <style> 
+.container{
+    display: flex; /*this 3 are enough to make our container */ 
+    justify-content: space-between; /* distributes*/
+    align-items:center; /*align vertically */
+    height: 200px
+}
+.box{
+    flex: 1; /* makes all the boxes to take up the same space*/
+    margin: 0 10px;  /* add horizontal space */
+    padding : 10px;  /* add space inside each color*/
+    background-color: #cccccc;
+    text-align: center;
+    border: 2px color(srgb rgb(15, 15, 15));
+}
+
+#heading {
+    color: black;
+    background-color: rgb(138, 166, 221);
+    text-align: center;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 50px;
+    border-color: black; 
+      
+}   
+body {
+  color: black;
+  background: white;
+  margin-bottom: 6ex;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  color: #039;
+  background: white;
+  margin-bottom: 2ex;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #039;
+}
+
+table {
+  margin-right: auto;
+  margin-bottom: 2ex;
+}
+
+thead td, th {
+  color: black;
+  background: #cccccc;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em 1ex;
+  border: 1pt solid gray;
+}
+
+tbody td, td {
+  color: black;
+  background: lightblue;
+  font-size: small;
+  padding: 0.5em 1ex;
+  border: 1pt solid gray;
+}
+
+pre {
+  color: black;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+    </style>
+    
+
+<body>
+       
+
+     <div class= "container">
+
+      <div class = "box">
+        <img src ="image/Intel.jpeg" width="200" height="160"> 
+      </div>
+      <div class = "box">
+        <img src = "image/Kingston.jpeg" width="200" height="160"> 
+      </div>
+      <div class = "box">
+        <img src = "image/ASUS.jpeg" width="200" height="160"> 
+      </div>
+    </div>
+
+
+  <h1> Purchase order form</h1>
+    
+    <form name="Order">
+    <table>
+      <tr>
+        <th>Product Number</th>
+        <th>Description</th>
+        <th>Item Price </th>
+        <th>Quantity</th>
+        <th>Item Total</th>
+      </tr>
+      <tr>
+        <td>CPU1001</td>
+        <td>Intel Core i7 Processor</td>
+        <td>R1500<input type="hidden" name="Price1" value="1500"></td>
+        <td><input type="text" name="Quantity1" onchange="CalcSubTotal1()"></td>
+        <td><input type="text" name="SubTotal1"></td>
+      </tr>
+      <tr>
+        <td>RAM1020</td>
+        <td>Kingston 4GB DDR RAM</td>
+        <td>R699<input type="hidden" name="Price2" value="699"></td>
+        <td><input type="text" name="Quantity2" onchange="CalcSubTotal2()"></td>
+        <td><input type="text" name="SubTotal2"></td>
+      </tr>
+      <tr>
+        <td>MB1006</td>
+        <td>ASUS BT250 ATX Motherboard</td>
+        <td>R700<input type="hidden" name="Price3" value="700"></td>
+        <td><input type="text" name="Quantity3" onchange="CalcSubTotal3()"></td>
+        <td><input type="text" name="SubTotal3"></td>
+      </tr>
+   </table>
+   <br/>
+
+   <table>
+      <tr>
+        <td>VAT</td>
+        <td><input type="text" name="VAT"></td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td><input type="text" name="Total"></td>
+      </tr>
+	</table>
+	</form>
+<input type="button" name="button" value="Calculate" onclick="CalcTotals()">
+
+</body>
+</html>
+
